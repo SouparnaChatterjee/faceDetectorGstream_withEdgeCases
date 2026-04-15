@@ -1,0 +1,17 @@
+﻿{
+    "configurations": [
+        {
+            "name": "Windows",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/dev/vcpkg/installed/x64-windows/include",
+                "C:/dev/vcpkg/installed/x64-windows/include/opencv4"
+            ],
+            "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}

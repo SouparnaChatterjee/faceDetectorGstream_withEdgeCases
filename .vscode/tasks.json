@@ -1,0 +1,21 @@
+﻿{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake Build",
+            "type": "shell",
+            "command": "cmake",
+            "args": ["--build", ".", "--config", "Release"],
+            "options": {"cwd": "${workspaceFolder}/build"},
+            "group": {"kind": "build", "isDefault": true}
+        },
+        {
+            "label": "Run Face Detection",
+            "type": "shell",
+            "command": "${workspaceFolder}/build/Release/face_detection.exe",
+            "args": ["frames", "output", "data/haarcascade_frontalface_default.xml"],
+            "options": {"cwd": "${workspaceFolder}"},
+            "group": "test"
+        }
+    ]
+}
