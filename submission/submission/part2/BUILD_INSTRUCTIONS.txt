@@ -1,0 +1,36 @@
+﻿================================================
+  Build Instructions - Face Detection App
+================================================
+
+REQUIREMENTS
+  - CMake 3.15+
+  - Visual Studio 2019/2022 (Windows)
+    OR g++ with C++17 support (Linux)
+  - OpenCV 4.x
+
+WINDOWS (Visual Studio)
+-----------------------
+  1. cmake -B build -DCMAKE_BUILD_TYPE=Release
+  2. cmake --build build --config Release
+  3. Exe: build\Release\face_detection.exe
+
+LINUX
+-----
+  g++ -std=c++17 -O2 src/face_detection_advanced.cpp \
+      -o face_detection \
+      $(pkg-config --cflags --libs opencv4)
+
+RUN
+---
+  face_detection.exe <framesDir> <outputDir> <frontalXML> <profileXML>
+
+  Example:
+    face_detection.exe test1\frames test1\output \
+        data\haarcascade_frontalface_default.xml \
+        data\haarcascade_profileface.xml
+
+  XML files:
+    Windows: C:\opencv\build\etc\haarcascades\
+    Linux  : /usr/share/opencv4/haarcascades/
+================================================
+

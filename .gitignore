@@ -1,21 +1,32 @@
-﻿# Build files
+﻿# Build output
 build/
+x64/
+.vs/
 
-# Large video files
+# Large files
 videos/
 *.mp4
-*.avi
-*.mkv
 
-# Temporary files
-*.tmp
-*.log
+# Submission zip
+submission.zip
+_staging/
 
-# VS Code (optional - can include)
-# .vscode/
+# Output face crops (too many files)
+test1/output/
+test2/output/
 
-# CMake generated
-CMakeCache.txt
-CMakeFiles/
-cmake_install.cmake
-Makefile
+# Keep frames as proof of Part 1 output
+# test1/frames/   <- we WANT this in git
+# test2/frames/   <- we WANT this in git
+
+# VS files
+*.user
+*.suo
+*.db
+*.opendb
+ipch/
+Browse.VC.db
+
+# OS
+Thumbs.db
+.DS_Store
